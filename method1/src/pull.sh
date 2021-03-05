@@ -10,7 +10,7 @@ output_dir="$1"
 mkdir -p "$output_dir"
 
 # hard coded link
-index_link="https://raw.githubusercontent.com/BYTE-LY/pull_test/master/files/index.txt"
+index_link="https://raw.githubusercontent.com/BYTE-LY/pull_test/master/method1/files/index.txt"
 
 # temp file for the index
 index="$(mktemp)"
