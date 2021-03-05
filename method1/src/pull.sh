@@ -19,7 +19,8 @@ index="$(mktemp)"
 wget -q --show-progress -O $index $index_link
 
 # pull the Files
-while read line ; do wget -q --show-progress -P "$output_dir" "$line" ; done < $index
+#while read line ; do wget -q --show-progress -P "$output_dir" "$line" ; done < $index
+while read line ; do wget -P "$output_dir" "$line" ; done < $index
 
 # remove the temp file
 rm $index
