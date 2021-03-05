@@ -10,7 +10,7 @@ output_dir="$1"
 mkdir -p "$output_dir"
 
 # hard coded link
-index_link="https://raw.githubusercontent.com/BYTE-LY/pull_test/master/method2/files/index.json"
+index_link="https://raw.githubusercontent.com/BYTE-LY/pull_test/master/v2/files/index.json"
 
 # temp file for the index
 index="$(mktemp)"
@@ -30,9 +30,7 @@ cat $index | jq -r '.directories[]' |
 # pull the files
 cat $index | jq -r '.files[]' |
 	while read line ; do
-		wget -q --show-progress -O "$output_dir$line" "https://raw.githubusercontent.com/BYTE-LY/pull_test/master/method2/files$line"
-		#echo "$output_dir$line -> https://raw.githubusercontent.com/BYTE-LY/pull_test/master/method2/files$line"
-
+		wget -q --show-progress -O "$output_dir$line" "https://raw.githubusercontent.com/BYTE-LY/pull_test/master/v2/files$line"
 	done
 
 # remove the temp file
