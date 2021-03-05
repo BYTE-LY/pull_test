@@ -12,8 +12,6 @@
 	],
 
 	"files": [
-		"/dirs.txt",
-		"/index.txt",
 		"/lib/config.json",
 		"/lib/projects.json",
 		"/lib/templates/python/template.py",
