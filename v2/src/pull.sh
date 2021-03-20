@@ -16,7 +16,6 @@ index_link="https://raw.githubusercontent.com/BYTE-LY/pull_test/master/v2/files/
 index="$(mktemp)"
 
 # pull the index
-#wget -q --show-progress -O $index $index_link
 wget -q --show-progress -O $index $index_link
 
 ## pull the files ##
